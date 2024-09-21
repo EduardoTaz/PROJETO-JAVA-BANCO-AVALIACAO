@@ -35,5 +35,29 @@ public class Conta {
     public void setSaldoConta(Double saldoConta) {
         this.saldoConta = saldoConta;
     }
+    
+    @Override
+    public String toString() {
+        return  "Nº da conta=" + numeroConta +
+                ", Nome do titular='" + nomeTitular + '\'' +
+                ", Saldo da conta='" + saldoConta + System.lineSeparator();
+    }
+
+    public void deposito(double valor) {
+        if (valor > 0) {
+            saldoConta += valor;
+        } else {
+            //erro
+        }
+    }
+
+    public void saque(double valor) {
+        if (valor > 0 && valor <= saldoConta) {
+            saldoConta -= valor;
+        } else {
+            //erro
+        }
+    }
+
 }
 

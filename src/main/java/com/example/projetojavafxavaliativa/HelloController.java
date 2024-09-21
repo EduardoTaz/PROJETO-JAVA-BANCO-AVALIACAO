@@ -60,11 +60,11 @@ public class HelloController {
     private List<Conta> listaContas = new ArrayList<>();
 
 
-    // DESABILITAR CAMPOS NÃO USADOS DE ACORDO COM O TIPO DE CONTA
+    // DESABILITAR CAMPOS
     @FXML
     void onClickCorrente() {
         txtLimite.setDisable(true);
-        txtDataVenc.setDisable(false);
+        txtDataVenc.setDisable(true);
     }
 
     @FXML
@@ -80,8 +80,13 @@ public class HelloController {
     }
 
 
+    // AO CLICAR EM CADASTRAR
     @FXML
     void onClickCadastrar() {
+        if(!rbCorrente.isSelected()  && !rbEspecial.isSelected()  && !rbPoupanca.isSelected()) {
+            campoVazio("Tipo de conta não selecionado");
+        }
+
         if(rbCorrente.isSelected()) {
             if(txtConta.getText().equals("")) {
                 campoVazio("Número da conta em branco");
@@ -90,7 +95,7 @@ public class HelloController {
                 campoVazio("Nome do titular em branco");
                 txtTitular.requestFocus();
             } else {
-                Conta conta = new Conta(Integer.parseInt(txtConta.getText()), txtTitular.getText(), Double.parseDouble(lblSaldo.getText()));
+                conta = new Conta(Integer.parseInt(txtConta.getText()), txtTitular.getText(), 0.00);
                 listaContas.add(conta);
                 txtAreaDados.setText(listaContas.toString());
                 limpaCampo();
@@ -108,7 +113,7 @@ public class HelloController {
                 campoVazio("Limite em branco");
                 txtLimite.requestFocus();
             } else {
-                Especial especial = new Especial(Integer.parseInt(txtConta.getText()), txtTitular.getText(), Double.parseDouble(lblSaldo.getText()), Double.parseDouble(txtLimite.getText()));
+                Especial especial = new Especial(Integer.parseInt(txtConta.getText()), txtTitular.getText(), 0.00, Double.parseDouble(txtLimite.getText()));
                 listaContas.add(especial);
                 txtAreaDados.setText(listaContas.toString());
                 limpaCampo();
@@ -118,18 +123,32 @@ public class HelloController {
     }
 
 
+    // AO CLICAR EM DEPOSITAR
     @FXML
     void onClickDepositar() {
+        if(txtDepositoSaque.getText().equals("")) {
+            campoVazio("Campo de depósito ou saque vazio");
+            txtDepositoSaque.requestFocus();
+        } else {
 
+        }
     }
 
+    // AO CLICAR EM SACAR
     @FXML
     void onClickSacar() {
 
     }
 
+    // AO CLICAR EM PESQUISAR
+    @FXML
+    void onClickPesquisar() {
+
+    }
 
 
+
+    // ------------------------------------ //
 
     @FXML
     private void campoVazio(String msg) {
