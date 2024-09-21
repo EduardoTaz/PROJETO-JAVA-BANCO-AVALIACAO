@@ -1,10 +1,5 @@
 package com.example.projetojavafxavaliativa;
 
-public class Poupanca extends Conta{
+public class Poupanca {
 
-    private Integer aniversario;
-
-    public Poupanca(numero integer, String titular) {
-        super(integer, titular);
-    }
 }
