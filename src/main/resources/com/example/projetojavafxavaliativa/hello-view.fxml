@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="884.0" prefWidth="742.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.example.projetojavafxavaliativa.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="884.0" prefWidth="742.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafxavaliativa.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -46,7 +46,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="42.0" prefWidth="699.0" spacing="30.0">
          <children>
-            <RadioButton fx:id="rbCorrente" mnemonicParsing="false" text="Corrente">
+            <RadioButton fx:id="rbCorrente" mnemonicParsing="false" onAction="#onClickCorrente" text="Corrente">
                <font>
                   <Font size="20.0" />
                </font>
@@ -54,12 +54,12 @@
                   <ToggleGroup fx:id="tipoConta" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbEspecial" mnemonicParsing="false" text="Especial" toggleGroup="$tipoConta">
+            <RadioButton fx:id="rbEspecial" mnemonicParsing="false" onAction="#onClickEspecial" text="Especial" toggleGroup="$tipoConta">
                <font>
                   <Font size="20.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="rbPoupanca" mnemonicParsing="false" text="Poupança" toggleGroup="$tipoConta">
+            <RadioButton fx:id="rbPoupanca" mnemonicParsing="false" onAction="#onClickPoupanca" text="Poupança" toggleGroup="$tipoConta">
                <font>
                   <Font size="20.0" />
                </font>
@@ -128,6 +128,20 @@
             </Label>
          </children>
       </HBox>
-      <TextArea prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="702.0">
+         <children>
+            <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onClickPesquisar" text="Pesquisar">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtPesquisar" prefHeight="44.0" prefWidth="296.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <TextArea fx:id="txtAreaDados" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </VBox>

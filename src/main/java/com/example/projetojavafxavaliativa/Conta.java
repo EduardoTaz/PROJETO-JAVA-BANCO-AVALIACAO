@@ -2,36 +2,38 @@ package com.example.projetojavafxavaliativa;
 
 public class Conta {
 
-    private numero Integer;
-    private String titular;
-    private Double saldo;
+    private Integer numeroConta;
+    private String nomeTitular;
+    private Double saldoConta;
 
-    public Conta(numero integer, String titular) {
-        Integer = integer;
-        this.titular = titular;
-        this.saldo = 0.0;
+    public Conta(Integer numeroConta, String nomeTitular, Double saldoConta) {
+        this.numeroConta = numeroConta;
+        this.nomeTitular = nomeTitular;
+        this.saldoConta = saldoConta;
     }
 
-    public numero getInteger() {
-        return Integer;
+    public Integer getNumeroConta() {
+        return numeroConta;
     }
 
-    public void setInteger(numero integer) {
-        Integer = integer;
+    public void setNumeroConta(Integer numeroConta) {
+        this.numeroConta = numeroConta;
     }
 
-    public String getTitular() {
-        return titular;
+    public String getNomeTitular() {
+        return nomeTitular;
     }
 
-    public void setTitular(String titular) {
-        this.titular = titular;
+    public void setNomeTitular(String nomeTitular) {
+        this.nomeTitular = nomeTitular;
     }
 
-    public void depositar(Double valor) {
-        this.saldo = saldo + valor;
+    public Double getSaldoConta() {
+        return saldoConta;
     }
 
-
+    public void setSaldoConta(Double saldoConta) {
+        this.saldoConta = saldoConta;
+    }
 }
 
