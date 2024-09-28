@@ -12,19 +12,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="732.0" prefWidth="637.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafxavaliativa.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="599.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafxavaliativa.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="0.0" spacing="15.0">
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="559.0" spacing="15.0">
          <children>
             <Label text="Nº da conta">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="txtConta" prefHeight="44.0" prefWidth="404.0">
+            <TextField fx:id="txtConta" prefHeight="0.0" prefWidth="409.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -38,7 +38,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="txtTitular" prefHeight="44.0" prefWidth="383.0">
+            <TextField fx:id="txtTitular" prefHeight="0.0" prefWidth="383.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -67,7 +67,7 @@
             </RadioButton>
          </children>
       </HBox>
-      <VBox alignment="CENTER_LEFT" prefHeight="196.0" prefWidth="699.0" spacing="10.0">
+      <VBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="559.0" spacing="10.0">
          <children>
             <Label text="Limite:">
                <font>
@@ -84,22 +84,22 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <DatePicker fx:id="dateVenc" prefHeight="25.0" prefWidth="228.0" />
+            <DatePicker fx:id="dateVenc" prefHeight="0.0" prefWidth="228.0" />
          </children>
       </VBox>
-      <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#onClickCadastrar" prefHeight="44.0" prefWidth="896.0" text="Cadastrar">
+      <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#onClickCadastrar" prefHeight="14.0" prefWidth="594.0" text="Cadastrar">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="699.0">
+      <HBox alignment="CENTER" prefHeight="19.0" prefWidth="559.0">
          <children>
             <Button fx:id="btnDepositar" mnemonicParsing="false" onAction="#onClickDepositar" text="Depositar">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="txtDepositoSaque" prefHeight="44.0" prefWidth="296.0">
+            <TextField fx:id="txtDepositoSaque" prefHeight="0.0" prefWidth="296.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -132,13 +132,14 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="txtPesquisar" prefHeight="44.0" prefWidth="296.0">
+            <TextField fx:id="txtPesquisar" prefHeight="24.0" prefWidth="296.0">
                <font>
                   <Font size="20.0" />
                </font>
             </TextField>
          </children>
       </HBox>
-      <TextArea fx:id="txtAreaDados" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="txtAreaDados" prefHeight="75.0" prefWidth="594.0" />
+      <Button mnemonicParsing="false" onAction="#criarConta" prefHeight="60.0" prefWidth="192.0" text="Criar conta" />
    </children>
 </VBox>
