@@ -1,6 +1,6 @@
 package com.example.projetojavafxavaliativa;
 
-import java.time.LocalDate;
+import java.time.LocalDate; // IMPOORTA A BIBLIOTECA DO LocalDate
 
 public class Poupanca extends Conta{
 
